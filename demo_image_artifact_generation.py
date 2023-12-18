@@ -204,7 +204,7 @@ plt.title('Noisy data')
 """
 
 dw = 1/5.0
-order = 0
+order = 1
 
 dst_dw = rescale(img, scale=(dw, dw, 1), order=order)
 dst_up = rescale(dst_dw, scale=(1/dw, 1/dw, 1), order=order)    # reciprocal number
@@ -220,3 +220,5 @@ plt.title('Downscaled image')
 plt.subplot(133)
 plt.imshow(np.squeeze(dst_up), cmap=cmap, vmin=0, vmax=1)
 plt.title('Upscaled image')
+
+# %%
